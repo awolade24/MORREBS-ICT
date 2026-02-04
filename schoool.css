@@ -1,0 +1,617 @@
+    :root {
+      --maroon: #800000;
+      --white: #ffffff;
+      --dark: #050517;
+      --light: #f9f9f9;
+      --accent: #ffcf56;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR (Handled by morrebs.css) ===== */
+    /* Styles removed to ensure consistency with index.html */
+
+    /* ===== HERO SECTION ===== */
+    .ict-hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(135deg, #80000096, #0000007a), url(images/school.webp) no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .ict-hero-content {
+      max-width: 800px;
+      padding: 0 1.5rem;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    .ict-hero h1 {
+      font-family: 'Michroma', sans-serif;
+      font-size: 2.7rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .ict-hero p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: var(--white);
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-buttons a {
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .cta-buttons a:first-child {
+      background: var(--accent);
+      color: var(--dark);
+    }
+
+    .cta-buttons a:last-child {
+      border: 2px solid var(--accent);
+      color: var(--white);
+    }
+
+    .cta-buttons a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .ict-hero h1 {
+        font-size: 2rem;
+      }
+
+      .ict-hero p {
+        font-size: 1rem;
+      }
+    }
+
+    .about-school {
+      width: 100%;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, #80000010, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1 1 500px;
+      animation: fadeSlide 1.5s ease forwards;
+    }
+
+    .about-text h2 {
+      font-family: 'Michroma', sans-serif;
+      font-size: 2.3rem;
+      color: #800000;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-text strong {
+      color: #800000;
+    }
+
+    .btn-learn {
+      display: inline-block;
+      background: #800000;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .btn-learn:hover {
+      background: #a00000;
+      transform: translateY(-3px);
+    }
+
+    .about-image {
+      flex: 1 1 400px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 20px;
+      transition: transform 0.5s ease;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .about-text h2 {
+        font-size: 1.9rem;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+      }
+
+      .about-image {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .about-school {
+      width: 100%;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, #80000010, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h2 {
+      font-family: 'Michroma', sans-serif;
+      font-size: 2.3rem;
+      color: #800000;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-text p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-text strong {
+      color: #800000;
+    }
+
+    .btn-learn {
+      display: inline-block;
+      background: #800000;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .btn-learn:hover {
+      background: #a00000;
+      transform: translateY(-3px);
+    }
+
+    .about-image {
+      flex: 1 1 400px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 20px;
+      transition: transform 0.9s ease;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+
+    /* --- Reveal Animation (Blur + Slide In) --- */
+    .reveal {
+      opacity: 0;
+      transform: translateX(-100px);
+      filter: blur(10px);
+      transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
+
+    @media (max-width: 900px) {
+      .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .about-text h2 {
+        font-size: 1.9rem;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+      }
+
+      .about-image {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .school-section {
+      padding: 80px 5%;
+      background: #fff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Michroma', sans-serif;
+      font-size: 2rem;
+      color: #800000;
+      margin-bottom: 50px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 30px;
+    }
+
+
+    .course-card {
+      position: relative;
+      background: #fafafa;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .course-front img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-front {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .course-front h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #111;
+    }
+
+    .price {
+      color: #800000;
+      font-weight: bold;
+    }
+
+    .duration {
+      color: #444;
+    }
+
+    .toggle-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      border: none;
+      width: 100%;
+      padding: 10px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+    }
+
+    .toggle-info i {
+      font-size: 1rem;
+      color: #800000;
+      font-family: 'Poppins', sans-serif;
+      transition: transform 0.3s ease;
+      font-weight: bolder;
+      text-decoration-line: overline;
+    }
+
+    .toggle-info i.rotate {
+      transform: rotate(180deg);
+    }
+
+    /* ------------------------------------------
+     LEFT-SIDE EXPANDING CARD (FINAL FIX)
+-------------------------------------------*/
+
+    .course-card {
+      position: relative;
+      overflow: visible !important;
+      /* allow slide-out */
+    }
+
+    .course-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      /* closed state */
+      height: 100%;
+      background: #fff6f6;
+      border-right: 3px solid #800000;
+      padding: 0;
+      opacity: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border-radius: 0 12px 12px 0;
+      transition: width 0.45s ease, opacity 0.35s ease;
+      z-index: 50;
+      text-align: center;
+    }
+
+    .course-back.active {
+      width: 260px;
+      /* Slide-out width */
+      opacity: 1;
+      padding: 20px;
+    }
+
+    .course-back .summary {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .course-back ul {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+    .course-back li {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* Arrow rotation */
+    .toggle-info i.rotate {
+      transform: rotate(180deg);
+    }
+
+    .course-back .summary {
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .course-back ul {
+      list-style: disc;
+      padding-left: 20px;
+      color: #444;
+      font-size: 0.9rem;
+    }
+
+    .enroll-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 18px;
+      background: #800000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .enroll-btn:hover {
+      background: #a30000;
+    }
+
+    @media (min-width: 1024px) {
+      .course-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+
+    /* === SCHOOL OF CODING SECTION === */
+    .coding-section {
+      background: linear-gradient(180deg, #ffffff, #fff5f5);
+      padding: 80px 5%;
+      overflow: hidden;
+    }
+
+    .coding-section .section-title {
+      color: #800000;
+    }
+
+    .coding-section .course-card {
+      transform: translateX(-100px);
+      opacity: 0;
+      transition: all 1s ease-out;
+    }
+
+    .coding-section.visible .course-card {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    /* Adjust spacing between cards */
+    .coding-section .course-grid {
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .course-grid {
+        grid-template-columns: 1fr;
+        /* single column on small screens */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .course-grid {
+        grid-template-columns: 1fr;
+        /* single column for mobile */
+      }
+    }
+
+    .coding-section {
+      overflow: visible;
+      /* ensure children aren't clipped */
+    }
+
+    .coding-section .course-card {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+
+    /* ===== FOOTER ===== */
+    .school-footer {
+      background: var(--maroon);
+      color: var(--white);
+      padding: 3rem 2rem 1rem;
+      margin-top: 50px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 2rem;
+    }
+
+    .footer-logo h2 {
+      font-family: 'Michroma', sans-serif;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .footer-contact h3 {
+      font-family: 'Michroma', sans-serif;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .footer-contact p {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-contact p {
+        justify-content: center;
+      }
+    }

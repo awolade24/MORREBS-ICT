@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morrebs ICT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://www.elegantthemes.com/fonts/ETmodules/ETmodules.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-red': '#800000',
+            'brand-purple': '#4E0070',
+            'brand-yellow': '#ffcf56',
+            'brand-accent': '#cf5c36',
+            'brand-dark': '#050517',
+          },
+          fontFamily: {
+            michroma: ['Michroma', 'serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          animation: {
+            scrollPartners: 'scrollPartners 40s linear infinite',
+            fadeUp: 'fadeUp 1.2s ease forwards',
+          },
+          keyframes: {
+            scrollPartners: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Michroma and Poppins Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="navbar"
+    class="fixed top-0 left-0 w-full z-[1000] bg-gradient-to-br from-brand-red to-brand-purple text-white shadow-lg transition-all duration-400 ease-in-out">
+    <div class="nav-inner max-w-[1200px] mx-auto px-[4%] h-[70px] flex items-center justify-between">
+      <div class="logo flex items-center gap-2.5 font-michroma text-[1.4rem] tracking-widest mr-auto">
+        <img src="images/morrebs-logo-1.webp" alt="Morrebs Logo" class="h-auto w-16 object-cover" />
+        <span>Morrebs ICT</span>
+      </div>
+
+      <nav class="primary hidden md:block">
+        <ul class="flex gap-10 m-0 p-0 list-none">
+          <li><a href="index.html"
+              class="active text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">Home</a>
+          </li>
+          <li><a href="about.html"
+              class="text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">About</a>
+          </li>
+          <li><a href="services.html"
+              class="text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">Services</a>
+          </li>
+          <li><a href="academy.html"
+              class="text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">School
+              of ICT</a></li>
+          <li><a href="contact.html"
+              class="text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- HAMBURGER BUTTON -->
+      <button id="menuToggle"
+        class="hamburger md:hidden group flex flex-col justify-center w-7 h-6 bg-transparent border-none cursor-pointer gap-[5px] transition-transform duration-300 ease-out"
+        aria-label="Toggle menu" aria-expanded="false">
+        <span
+          class="bar h-[3px] w-full bg-white rounded-[2px] transition-all duration-400 ease-in-out group-[.active]:translate-y-[8px] group-[.active]:rotate-45"></span>
+        <span
+          class="bar h-[3px] w-full bg-white rounded-[2px] transition-all duration-400 ease-in-out group-[.active]:opacity-0"></span>
+        <span
+          class="bar h-[3px] w-full bg-white rounded-[2px] transition-all duration-400 ease-in-out group-[.active]:-translate-y-[8px] group-[.active]:-rotate-45"></span>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+      class="mobile-menu hidden [&.open]:flex flex-col bg-black/90 absolute top-[70px] left-0 w-full py-5 text-center backdrop-blur-md"
+      aria-hidden="true">
+      <a href="index.html"
+        class="active py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">Home</a>
+      <a href="about.html"
+        class="py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">About</a>
+      <a href="services.html"
+        class="py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">Services</a>
+      <a href="academy.html"
+        class="py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">School
+        of ICT</a>
+      <a href="contact.html"
+        class="py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">Contact</a>
+    </div>
+  </header>
+  <section class="hero-carousel relative w-full h-[90vh] overflow-hidden font-poppins" id="hero-carousel">
+    <!-- Slide 1 -->
+    <div
+      class="hero-slide active absolute top-0 left-0 w-full h-full bg-cover bg-top opacity-0 scale-105 transition-all duration-[1500ms] ease-out [&.active]:opacity-100 [&.active]:scale-100 [&.active]:z-[2]"
+      style="background-image: url('images/back42.jpg')">
+      <div class="hero-overlay absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/60 to-black/55 z-[1]">
+      </div>
+      <div
+        class="hero-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-left z-[3] animate-[fadeUp_1.2s_ease]">
+        <h1 class="font-michroma text-[2.5rem] md:text-3xl mb-4 tracking-wider font-light text-brand-yellow">Welcome to
+          Morrebs ICT</h1>
+        <p class="max-w-[650px] mx-auto mb-8 text-[1.1rem] md:text-base leading-relaxed text-gray-100 px-4">
+          Innovating technology, empowering people, and driving Africa’s
+          digital transformation.
+        </p>
+        <a href="services.html"
+          class="hero-btn inline-block py-3 px-8 bg-brand-yellow text-brand-red font-semibold tracking-wide rounded-[10px] no-underline transition-colors duration-300 hover:bg-brand-red hover:text-white">Become
+          a Member of the Hub</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div
+      class="hero-slide absolute top-0 left-0 w-full h-full bg-cover bg-top opacity-0 scale-105 transition-all duration-[1500ms] ease-out [&.active]:opacity-100 [&.active]:scale-100 [&.active]:z-[2]"
+      style="background-image: url('images/IMG_9292.webp')">
+      <div class="hero-overlay absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/60 to-black/55 z-[1]">
+      </div>
+      <div
+        class="hero-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-left z-[3] animate-[fadeUp_1.2s_ease]">
+        <h1 class="font-michroma text-[2.5rem] md:text-3xl mb-4 tracking-wider font-light text-brand-yellow">Empowering
+          Digital Solutions</h1>
+        <p class="max-w-[650px] mx-auto mb-8 text-[1.1rem] md:text-base leading-relaxed text-gray-100 px-4">
+          From design to development, we craft powerful and scalable
+          experiences for all.
+        </p>
+        <a href="services.html"
+          class="hero-btn inline-block py-3 px-8 bg-brand-yellow text-brand-red font-semibold tracking-wide rounded-[10px] no-underline transition-colors duration-300 hover:bg-brand-red hover:text-white">Our
+          Products</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div
+      class="hero-slide absolute top-0 left-0 w-full h-full bg-cover bg-top opacity-0 scale-105 transition-all duration-[1500ms] ease-out [&.active]:opacity-100 [&.active]:scale-100 [&.active]:z-[2]"
+      style="background-image: url('images/IMG_3191.webp')">
+      <div class="hero-overlay absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/60 to-black/55 z-[1]">
+      </div>
+      <div
+        class="hero-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-left z-[3] animate-[fadeUp_1.2s_ease]">
+        <h1 class="font-michroma text-[2.5rem] md:text-3xl mb-4 tracking-wider font-light text-brand-yellow">Building
+          the Future of ICT</h1>
+        <p class="max-w-[650px] mx-auto mb-8 text-[1.1rem] md:text-base leading-relaxed text-gray-100 px-4">
+          We don’t just follow trends we create them through innovation and dedication.
+        </p>
+        <a href="contact.html"
+          class="hero-btn inline-block py-3 px-8 bg-brand-yellow text-brand-red font-semibold tracking-wide rounded-[10px] no-underline transition-colors duration-300 hover:bg-brand-red hover:text-white">Get
+          Started</a>
+      </div>
+    </div>
+
+
+    <!-- Navigation Dots -->
+    <div
+      class="hero-dots absolute bottom-[30px] right-[40px] flex flex-col gap-[10px] z-[4] md:right-1/2 md:translate-x-1/2 md:bottom-[25px] md:flex-row">
+      <span
+        class="hero-dot active w-3 h-3 rounded-full bg-white/50 border-2 border-black/80 cursor-pointer transition-all duration-300 [&.active]:bg-brand-yellow [&.active]:border-[#240000] [&.active]:scale-125"
+        data-index="0"></span>
+      <span
+        class="hero-dot w-3 h-3 rounded-full bg-white/50 border-2 border-black/80 cursor-pointer transition-all duration-300 [&.active]:bg-brand-yellow [&.active]:border-[#240000] [&.active]:scale-125"
+        data-index="1"></span>
+      <span
+        class="hero-dot w-3 h-3 rounded-full bg-white/50 border-2 border-black/80 cursor-pointer transition-all duration-300 [&.active]:bg-brand-yellow [&.active]:border-[#240000] [&.active]:scale-125"
+        data-index="2"></span>
+
+    </div>
+  </section>
+
+  <section class="services-carousel bg-white text-brand-red font-michroma py-[70px] px-[5%] overflow-hidden relative"
+    id="services">
+    <h2
+      class="services-title text-center text-[2rem] text-brand-red mb-[50px] tracking-wider md:text-[2rem] sm:text-[1.7rem]">
+      OUR SERVICES</h2>
+
+    <div class="services-row relative overflow-x-auto md:overflow-visible w-full" data-speed="28">
+      <div
+        class="services-track flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 items-center md:items-stretch will-change-transform transition-transform duration-200 ease-linear">
+        <div
+          class="service-card group flex-[0_0_280px] md:flex-none md:w-full bg-white rounded-[14px] shadow-[0_4px_18px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300 ease-in-out text-center cursor-pointer hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(128,0,0,0.25)] max-w-[85%] sm:max-w-[92%] sm:flex-[0_0_92%] md:max-w-none">
+          <img src="images/IMG_0926.webp" alt="Web Development" loading="lazy"
+            class="w-full h-[160px] object-cover transition-transform duration-600 ease-in-out group-hover:scale-110" />
+          <div class="service-info p-4 text-center">
+            <h3 class="text-brand-red text-base mb-1.5 font-michroma">Web Development</h3>
+            <p class="text-[0.85rem] text-[#333] leading-relaxed font-poppins">
+              Elevate your online presence with a responsive website. Our expert team transforms ideas into visually
+              stunning and functional websites, ensuring a seamless digital experience for all.
+            </p>
+            <button
+              class="learn-more mt-2.5 bg-gradient-to-br from-brand-accent to-brand-yellow text-brand-dark border-none py-2 px-[18px] rounded-[5px] cursor-pointer font-semibold transition-all duration-500 ease-in-out hover:from-brand-yellow hover:to-brand-accent hover:scale-105 hover:rounded-[30px] hover:shadow-lg">Learn
+              More</button>
+          </div>
+        </div>
+
+        <div
+          class="service-card group flex-[0_0_280px] md:flex-none md:w-full bg-white rounded-[14px] shadow-[0_4px_18px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300 ease-in-out text-center cursor-pointer hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(128,0,0,0.25)] max-w-[85%] sm:max-w-[92%] sm:flex-[0_0_92%] md:max-w-none">
+          <img src="images/school.webp" alt="School of ICT" loading="lazy"
+            class="w-full h-[160px] object-cover transition-transform duration-600 ease-in-out group-hover:scale-110" />
+          <div class="service-info p-4 text-center">
+            <h3 class="text-brand-red text-base mb-1.5 font-michroma">School of ICT</h3>
+            <p class="text-[0.85rem] text-[#333] leading-relaxed font-poppins">
+              Morrebs School of ICT is your gateway to cutting edge ICT education. Our dynamic curriculum and expert
+              faculty prepare students to thrive in the evolving tech ecosystem.
+            </p>
+            <button
+              class="learn-more mt-2.5 bg-gradient-to-br from-brand-accent to-brand-yellow text-brand-dark border-none py-2 px-[18px] rounded-[5px] cursor-pointer font-semibold transition-all duration-500 ease-in-out hover:from-brand-yellow hover:to-brand-accent hover:scale-105 hover:rounded-[30px] hover:shadow-lg">Learn
+              More</button>
+          </div>
+        </div>
+
+        <div
+          class="service-card group flex-[0_0_280px] md:flex-none md:w-full bg-white rounded-[14px] shadow-[0_4px_18px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300 ease-in-out text-center cursor-pointer hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(128,0,0,0.25)] max-w-[85%] sm:max-w-[92%] sm:flex-[0_0_92%] md:max-w-none">
+          <img src="images/product.webp" alt="Product Design" loading="lazy"
+            class="w-full h-[160px] object-cover transition-transform duration-600 ease-in-out group-hover:scale-110" />
+          <div class="service-info p-4 text-center">
+            <h3 class="text-brand-red text-base mb-1.5 font-michroma">Product Design</h3>
+            <p class="text-[0.85rem] text-[#333] leading-relaxed font-poppins">
+              Revolutionize your business with our creative designs. From concept to reality, our dedicated team crafts
+              visually appealing and user friendly designs and graphics to elevate your brand.
+            </p>
+            <button
+              class="learn-more mt-2.5 bg-gradient-to-br from-brand-accent to-brand-yellow text-brand-dark border-none py-2 px-[18px] rounded-[5px] cursor-pointer font-semibold transition-all duration-500 ease-in-out hover:from-brand-yellow hover:to-brand-accent hover:scale-105 hover:rounded-[30px] hover:shadow-lg">Learn
+              More</button>
+          </div>
+        </div>
+
+        <div
+          class="service-card group flex-[0_0_280px] md:flex-none md:w-full bg-white rounded-[14px] shadow-[0_4px_18px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300 ease-in-out text-center cursor-pointer hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(128,0,0,0.25)] max-w-[85%] sm:max-w-[92%] sm:flex-[0_0_92%] md:max-w-none">
+          <img src="images/business.webp" alt="Business Centre" loading="lazy"
+            class="w-full h-[160px] object-cover transition-transform duration-600 ease-in-out group-hover:scale-110" />
+          <div class="service-info p-4 text-center">
+            <h3 class="text-brand-red text-base mb-1.5 font-michroma">Business Centre</h3>
+            <p class="text-[0.85rem] text-[#333] leading-relaxed font-poppins">
+              As a Computer Hub providing solutions for businesses, we offer services such as printing, document
+              scanning, photocopy, typing, spiral binding, lamination, instant digital passport.
+            </p>
+            <button
+              class="learn-more mt-2.5 bg-gradient-to-br from-brand-accent to-brand-yellow text-brand-dark border-none py-2 px-[18px] rounded-[5px] cursor-pointer font-semibold transition-all duration-500 ease-in-out hover:from-brand-yellow hover:to-brand-accent hover:scale-105 hover:rounded-[30px] hover:shadow-lg">Learn
+              More</button>
+          </div>
+        </div>
+
+        <div
+          class="service-card group flex-[0_0_280px] md:flex-none md:w-full bg-white rounded-[14px] shadow-[0_4px_18px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300 ease-in-out text-center cursor-pointer hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(128,0,0,0.25)] max-w-[85%] sm:max-w-[92%] sm:flex-[0_0_92%] md:max-w-none">
+          <img src="images/app.JPG" alt="App Development" loading="lazy"
+            class="w-full h-[160px] object-cover transition-transform duration-600 ease-in-out group-hover:scale-110" />
+          <div class="service-info p-4 text-center">
+            <h3 class="text-brand-red text-base mb-1.5 font-michroma">App Development</h3>
+            <p class="text-[0.85rem] text-[#333] leading-relaxed font-poppins">
+              With our software application development solutions, We turn ideas into sleek, user-friendly applications
+              that captivate audiences. Boost your online impact with innovative apps.
+            </p>
+            <button
+              class="learn-more mt-2.5 bg-gradient-to-br from-brand-accent to-brand-yellow text-brand-dark border-none py-2 px-[18px] rounded-[5px] cursor-pointer font-semibold transition-all duration-500 ease-in-out hover:from-brand-yellow hover:to-brand-accent hover:scale-105 hover:rounded-[30px] hover:shadow-lg">Learn
+              More</button>
+          </div>
+        </div>
+
+        <div
+          class="service-card group flex-[0_0_280px] md:flex-none md:w-full bg-white rounded-[14px] shadow-[0_4px_18px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300 ease-in-out text-center cursor-pointer hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(128,0,0,0.25)] max-w-[85%] sm:max-w-[92%] sm:flex-[0_0_92%] md:max-w-none">
+          <img src="images/consult.webp" alt="ICT Consultancy" loading="lazy"
+            class="w-full h-[160px] object-cover transition-transform duration-600 ease-in-out group-hover:scale-110" />
+          <div class="service-info p-4 text-center">
+            <h3 class="text-brand-red text-base mb-1.5 font-michroma">ICT Consultancy</h3>
+            <p class="text-[0.85rem] text-[#333] leading-relaxed font-poppins">
+              Guiding your business towards digital transformation with expert
+              ICT strategies.
+            </p>
+            <button
+              class="learn-more mt-2.5 bg-gradient-to-br from-brand-accent to-brand-yellow text-brand-dark border-none py-2 px-[18px] rounded-[5px] cursor-pointer font-semibold transition-all duration-500 ease-in-out hover:from-brand-yellow hover:to-brand-accent hover:scale-105 hover:rounded-[30px] hover:shadow-lg">Learn
+              More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="products-section relative bg-[#ff7b7b21] text-brand-red py-16 px-8 overflow-hidden text-center font-poppins"
+    id="products">
+    <div
+      class="wave-bg absolute top-0 left-0 w-full h-[150px] bg-[url('images/wave.svg')] bg-no-repeat bg-center bg-cover opacity-30 z-0">
+    </div>
+
+    <h1 class="section-title font-michroma text-[2.5rem] mb-8">Our Products</h1>
+
+    <div class="product-tabs flex justify-center flex-wrap gap-4 mb-12 z-[2] relative">
+      <button
+        class="tab bg-transparent text-brand-red border-2 border-brand-red py-2.5 px-6 rounded-[30px] cursor-pointer font-medium transition-all duration-300 hover:bg-brand-red hover:text-white [&.active]:bg-brand-red [&.active]:text-white"
+        data-target="morrjobs">MorrJobs</button>
+      <button
+        class="tab bg-transparent text-brand-red border-2 border-brand-red py-2.5 px-6 rounded-[30px] cursor-pointer font-medium transition-all duration-300 hover:bg-brand-red hover:text-white [&.active]:bg-brand-red [&.active]:text-white"
+        data-target="morrspital">Morrspital</button>
+      <button
+        class="tab active bg-transparent text-brand-red border-2 border-brand-red py-2.5 px-6 rounded-[30px] cursor-pointer font-medium transition-all duration-300 hover:bg-brand-red hover:text-white [&.active]:bg-brand-red [&.active]:text-white"
+        data-target="music">Morrebs Music</button>
+
+
+    </div>
+
+    <div class="product-slider relative overflow-hidden max-w-[1100px] mx-auto">
+
+
+      <div
+        class="product-slide hidden items-center justify-between gap-8 opacity-0 translate-x-[30px] transition-all duration-800 ease-in-out md:flex-row flex-col text-center md:text-left [&.active]:flex [&.active]:opacity-100 [&.active]:translate-x-0"
+        id="morrjobs">
+        <div class="product-image">
+          <img src="images/MorrJobs.png" alt="MorrJobs" loading="lazy"
+            class="w-full max-w-[30rem] rounded-[15px] shadow-[0_0_15px_rgba(0,0,0,0.4)]" />
+        </div>
+        <div class="product-content text-left flex-1 md:text-left text-center">
+          <h2 class="font-michroma text-brand-red text-[2rem] mb-4">MorrJobs</h2>
+          <p class="text-[1rem] mb-6 leading-[1.6]">
+            Empowering job seekers and recruiters alike. MorrJobs connects
+            skills to opportunities through an AI-driven job matching system
+            that makes hiring faster and smarter.
+          </p>
+          <a href="https://morrjobs.com/"
+            class="btn-learn inline-block bg-brand-red text-white py-2.5 px-6 rounded-[25px] no-underline font-semibold transition-all duration-300 hover:bg-white hover:text-brand-accent">Learn
+            More</a>
+        </div>
+      </div>
+
+
+      <div
+        class="product-slide hidden items-center justify-between gap-8 opacity-0 translate-x-[30px] transition-all duration-800 ease-in-out md:flex-row flex-col text-center md:text-left [&.active]:flex [&.active]:opacity-100 [&.active]:translate-x-0"
+        id="morrspital">
+        <div class="product-image">
+          <img src="images/Dashboard-Mockup.webp" alt="Morrspital" loading="lazy"
+            class="w-full max-w-[30rem] rounded-[15px] shadow-[0_0_15px_rgba(0,0,0,0.4)]" />
+        </div>
+        <div class="product-content text-left flex-1 md:text-left text-center">
+          <h2 class="font-michroma text-brand-red text-[2rem] mb-4">MorrSpital</h2>
+          <p class="text-[1rem] mb-6 leading-[1.6]">
+            Welcome to the future of healthcare management with Morrspital, a revolutionary Healthcare Management System
+            crafted by Morrebs ICT Solutions Limited.
+            <hr class="my-4 border-gray-300">
+            On a mission to empower healthcare facilities across Africa and beyond, Morrspital stands as a beacon of
+            efficiency, innovation, and seamless healthcare administration.
+
+            Experience the Morrspital advantage and transform your healthcare facility into a beacon of efficiency,
+            care, and innovation…
+          </p>
+          <a href="morrspital.html"
+            class="btn-learn inline-block bg-brand-red text-white py-2.5 px-6 rounded-[25px] no-underline font-semibold transition-all duration-300 hover:bg-white hover:text-brand-accent">EMPOWER
+            YOUR HEALTHCARE FACILITY</a>
+        </div>
+      </div>
+
+      <div
+        class="product-slide active hidden items-center justify-between gap-8 opacity-0 translate-x-[30px] transition-all duration-800 ease-in-out md:flex-row flex-col text-center md:text-left [&.active]:flex [&.active]:opacity-100 [&.active]:translate-x-0"
+        id="music">
+        <div class="product-image">
+          <img src="images/Stage-Ezra-Jinang-Job-Manja-JoshPee.webp" alt="Morrebs Music" loading="lazy"
+            class="w-full max-w-[30rem] rounded-[15px] shadow-[0_0_15px_rgba(0,0,0,0.4)]" />
+        </div>
+        <div class="product-content text-left flex-1 md:text-left text-center">
+          <h2 class="font-michroma text-brand-red text-[2rem] mb-4">MorrMusic</h2>
+          <p class="text-[1rem] mb-6 leading-[1.6]">
+            Morrebs Music is one of the services provided by Morrebs ICT Solutions Limited, a Nigerian Company tasked
+            with providing Innovative ICT Solutions.
+            <br><br>
+            At Morrebs Music, we are a music platform Harmonizing the beats of innovation and melody. In this
+            rhythm infused realm, we don’t just distribute tracks and make it accessible to ready audience but also
+            ensure
+            that the musicians get their due royalties.
+            <hr class="my-4 border-gray-300">
+
+            Here on this platform, you embark on a journey where music isn’t just sent into the world, but passionately
+            woven into the tapestry of global resonance. We’re the conductors of a sonic revolution, transforming your
+            compositions into a universal language that resonates with every ear it touches.
+          </p>
+          <a href="hello@morrebs.org"
+            class="btn-learn inline-block bg-brand-red text-white py-2.5 px-6 rounded-[25px] no-underline font-semibold transition-all duration-300 hover:bg-white hover:text-brand-accent">Visit
+            Site</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="backICT relative min-h-screen w-full z-[0]">
+    <div
+      class="ICT bg-[#ff7b7b21] text-brand-red font-poppins min-h-[auto] lg:min-h-screen flex flex-col lg:flex-row pt-16 lg:pt-8 px-4 lg:px-0 pb-8 justify-start lg:justify-between gap-10 lg:gap-20 z-0 relative rounded-[10px] w-full lg:w-full items-center">
+      <div class="mainICT w-full lg:w-1/2 text-center h-auto lg:h-screen lg:text-center pl-0 lg:pl-4">
+        <h1 class="text-[2.5rem] lg:text-[3rem] pt-8 lg:pt-[10rem] font-michroma mb-6">An ICT Hub</h1>
+        <p class="max-w-[90%] lg:max-w-[440px] text-brand-red mb-[18px] leading-[1.8rem] lg:leading-[2rem] mx-auto">
+          With a strategic focus on fostering innovation and entrepreneurial spirit, Morrebs stands as a beacon for
+          those aspiring to make waves in the ever evolving tech industry that is dedicated to nurturing and empowering
+          the tech giants of tomorrow.
+        </p>
+        <button
+          class="learn-more mb-12 lg:mb-[7rem] bg-gradient-to-br from-brand-accent to-brand-yellow text-brand-dark border-none py-2 px-[18px] rounded-[5px] cursor-pointer font-semibold transition-all duration-500 ease-in-out hover:from-brand-yellow hover:to-brand-accent hover:scale-105 hover:rounded-[30px] hover:shadow-lg">Join
+          Us, Lets Innovate</button>
+      </div>
+      <div class="textICT w-full lg:w-auto flex justify-center">
+        <div
+          class="subtexts flex flex-col gap-6 lg:gap-[10px] w-[90%] lg:w-auto bg-white/50 lg:bg-white/50 p-4 lg:p-0 rounded-none lg:rounded-none">
+          <div
+            class="subtext bg-[rgba(255,196,196,0.15)] backdrop-blur-[20px] rounded-[20px] p-4 text-center border border-white/20 shadow-lg w-full lg:w-auto">
+            <div
+              class="profile-image w-[4rem] h-[4rem] lg:w-[5rem] lg:h-[5rem] bg-white/95 rounded-full flex items-center justify-center mx-auto mb-4 text-[1rem]">
+              <img src="images/3.webp" alt="Training & Mentorship" loading="lazy"
+                class="w-full h-full object-cover rounded-full">
+            </div>
+            <h2 class="text-[1.3rem] font-michroma max-w-[20rem] mx-auto mb-2">Training & Mentorship</h2>
+            <p class="font-poppins text-[0.9rem]">Morrebs is a launchpad of talents designed to empower individuals with
+              the skills and guidance needed for
+              success in the dynamic tech ecosystem. With personalized mentorship and hands-on training, we cultivate
+              the next generation of innovators, fostering a community where knowledge meets creativity.</p>
+          </div>
+
+          <div
+            class="subtext bg-[rgba(255,196,196,0.15)] backdrop-blur-[20px] rounded-[20px] p-4 text-center border border-white/20 shadow-lg w-full lg:w-auto">
+            <div
+              class="profile-image w-[4rem] h-[4rem] lg:w-[5rem] lg:h-[5rem] bg-white/95 rounded-full flex items-center justify-center mx-auto mb-4 text-[1rem]">
+              <img src="images/1.webp" alt="Acceleration & Incubation" loading="lazy"
+                class="w-full h-full object-cover rounded-full">
+            </div>
+            <h2 class="text-[1.3rem] font-michroma max-w-[20rem] mx-auto mb-2">Acceleration & Incubation</h2>
+            <p class="font-poppins text-[0.9rem]">Our accelerators and incubators serve as catalysts for cultivating
+              groundbreaking ideas into thriving
+              startups. Through expert guidance, we empower innovation enthusiasts to navigate the innovation path from
+              concept to success
+              fostering a dynamic ecosystem where creative talents becomes success stories. </p>
+          </div>
+
+          <div
+            class="subtext bg-[rgba(255,196,196,0.15)] backdrop-blur-[20px] rounded-[20px] p-4 text-center border border-white/20 shadow-lg w-full lg:w-auto">
+            <div
+              class="profile-image w-[4rem] h-[4rem] lg:w-[5rem] lg:h-[5rem] bg-white/95 rounded-full flex items-center justify-center mx-auto mb-4 text-[1rem]">
+              <img src="images/2.webp" alt="Innovation & Startup" loading="lazy"
+                class="w-full h-full object-cover rounded-full">
+            </div>
+            <h2 class="text-[1.3rem] font-michroma max-w-[20rem] mx-auto mb-2">Innovation &Startup</h2>
+            <p class="font-poppins text-[0.9rem]">At Morrebs, we nurture and propel Innovations and Startups into the
+              forefront of industry evolution. Our
+              vibrant ecosystem provides a fertile ground for creativity to flourish, offering comprehensive support and
+              resources to turn entrepreneurial visions into sustainable success stories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO BACKGROUND SECTION -->
+  <section
+    class="video-section relative w-full h-[60vh] overflow-hidden flex items-center justify-center text-center text-white">
+    <div class="video-overlay absolute top-0 left-0 w-full h-full bg-black/50 z-[1]"></div>
+    <video class="bg-video absolute top-0 left-0 w-full h-full object-cover z-0" autoplay muted loop playsinline>
+      <source src="images/River.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-content relative z-[2] max-w-[800px] px-4 animate-[fadeUp_1s_ease]">
+      <h2 class="font-michroma text-[2rem] md:text-[2.5rem] mb-4 text-brand-yellow">Experience The Tech Community at Its
+        Purest</h2>
+      <p class="text-[1.1rem] mb-8 font-poppins">We grow, nurture, and deliver excellence.</p>
+      <a href="#about"
+        class="video-btn inline-block py-3 px-8 bg-transparent border-2 border-brand-yellow text-brand-yellow font-semibold rounded-[30px] no-underline transition-all duration-300 hover:bg-brand-yellow hover:text-brand-dark">Discover
+        More</a>
+    </div>
+  </section>
+  <!-- PARTNER BRANDS SECTION -->
+  <section class="partners-section py-12 bg-white text-center overflow-hidden">
+    <h2 class="text-brand-red font-michroma text-[2rem] mb-4">Our Trusted Partners</h2>
+    <p class="text-gray-600 font-poppins mb-8 max-w-[600px] mx-auto">We’re proud to collaborate with organizations that
+      share our commitment to innovation and excellence.</p>
+
+    <div class="partners-carousel flex w-[200%] overflow-hidden relative group">
+      <div
+        class="partners-track flex w-full animate-[scrollPartners_30s_linear_infinite] group-hover:[animation-play-state:paused] gap-12 text-[0]">
+        <img src="images/zion logo.jpeg" alt="Zion Logo"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/kolseg.jpg" alt="Kolseg"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/madam.jpg" alt="Madam"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/maria.jpg" alt="Maria"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/silk.jpg" alt="Silk"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/bakad.jpg" alt="Bakad"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/low bond.jpg" alt="Low Bond"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <!-- Duplicate for detailed scroll -->
+        <img src="images/zion logo.jpeg" alt="Zion Logo"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/kolseg.jpg" alt="Kolseg"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/madam.jpg" alt="Madam"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/maria.jpg" alt="Maria"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/silk.jpg" alt="Silk"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/bakad.jpg" alt="Bakad"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+        <img src="images/low bond.jpg" alt="Low Bond"
+          class="h-16 w-auto grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+      </div>
+    </div>
+  </section>
+
+  <section class="google-reviews py-16 bg-[#f9f9f9] text-center font-poppins" id="reviews">
+    <h2 class="text-brand-red font-michroma text-[2rem] mb-12">What Our Clients Say</h2>
+    <div class="reviews-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto px-4">
+      <!-- Google Review Card 1 -->
+      <div
+        class="review-card google-card bg-white p-6 rounded-[12px] shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg text-left">
+        <div class="review-header flex items-center justify-between mb-4">
+          <div class="reviewer-profile flex items-center gap-3">
+            <span class="avatar-initial w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"
+              style="background-color: #7b1fa2;">H</span>
+            <div class="reviewer-details">
+              <h4 class="font-semibold text-brand-dark m-0">Hakim Balogun</h4>
+              <span class="review-date text-sm text-gray-500">3 years ago</span>
+            </div>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+            class="google-logo-icon w-6 h-6">
+        </div>
+        <div class="star-rating text-[#ffce31] mb-2.5">
+          ★★★★★
+        </div>
+        <p class="review-text text-gray-600 leading-relaxed text-[0.95rem]">
+          Competent professionals to trust with your IT needs.
+        </p>
+      </div>
+
+      <!-- Google Review Card 3 -->
+      <div
+        class="review-card google-card bg-white p-6 rounded-[12px] shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg text-left">
+        <div class="review-header flex items-center justify-between mb-4">
+          <div class="reviewer-profile flex items-center gap-3">
+            <span class="avatar-initial w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"
+              style="background-color: #00695c;">T</span>
+            <div class="reviewer-details">
+              <h4 class="font-semibold text-brand-dark m-0">Thompson Fadaisi</h4>
+              <span class="review-date text-sm text-gray-500">3 years ago</span>
+            </div>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+            class="google-logo-icon w-6 h-6">
+        </div>
+        <div class="star-rating text-[#ffce31] mb-2.5">
+          ★★★★★
+        </div>
+        <p class="review-text text-gray-600 leading-relaxed text-[0.95rem]">
+          Learning at Morrebs ICT has been wonderful...
+        </p>
+      </div>
+
+      <!-- Google Review Card 4 -->
+      <div
+        class="review-card google-card bg-white p-6 rounded-[12px] shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg text-left">
+        <div class="review-header flex items-center justify-between mb-4">
+          <div class="reviewer-profile flex items-center gap-3">
+            <span class="avatar-initial w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"
+              style="background-color: #c2185b;">P</span>
+            <div class="reviewer-details">
+              <h4 class="font-semibold text-brand-dark m-0">Pamilerin Coker</h4>
+              <span class="review-date text-sm text-gray-500">4 years ago</span>
+            </div>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+            class="google-logo-icon w-6 h-6">
+        </div>
+        <div class="star-rating text-[#ffce31] mb-2.5">
+          ★★★★★
+        </div>
+        <p class="review-text text-gray-600 leading-relaxed text-[0.95rem]">
+          <strong>Positive:</strong> Value
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- CTA SECTION -->
+  <section
+    class="cta-section bg-gradient-to-r from-brand-red to-brand-purple text-white py-16 px-4 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="relative z-10 max-w-[800px] mx-auto">
+      <h2 class="font-michroma text-2xl md:text-3xl mb-6">Transform your Life With a Career in Tech Today</h2>
+      <p class="font-poppins text-gray-100 mb-8 max-w-[600px] mx-auto">
+        Join our academy and gain the skills needed to thrive in the digital age.
+      </p>
+      <a href="academy.html"
+        class="inline-block py-3 px-8 bg-brand-yellow text-brand-dark font-semibold rounded-[30px] transition-transform duration-300 hover:scale-105 hover:shadow-lg">Get
+        Started <i class="fas fa-arrow-right ml-2"></i></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-white pt-16 pb-8 font-poppins text-sm">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Col 1: Logo & About -->
+      <div class="footer-col space-y-4">
+        <div class="flex items-center gap-3 font-michroma text-xl tracking-wide">
+          <img src="images/morrebs-logo-1.webp" alt="Morrebs Logo" class="w-12 h-auto" />
+          <span>Morrebs ICT</span>
+        </div>
+        <p class="text-gray-400 leading-relaxed">
+          Empowering the future through technology, innovation, and education. Join us on our journey to digital
+          excellence.
+        </p>
+        <div class="social-links flex gap-3 mt-4">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+              class="fab fa-x-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+              class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col space-y-4">
+        <h3 class="font-michroma text-lg text-brand-yellow border-b border-brand-accent/30 pb-2 inline-block">Quick
+          Links</h3>
+        <ul class="space-y-2.5">
+          <li><a href="about.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">About Us</a></li>
+          <li><a href="services.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Services</a></li>
+          <li><a href="academy.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">School of ICT</a></li>
+          <li><a href="contact.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services -->
+      <div class="footer-col space-y-4">
+        <h3 class="font-michroma text-lg text-brand-yellow border-b border-brand-accent/30 pb-2 inline-block">Services
+        </h3>
+        <ul class="space-y-2.5">
+          <li><a href="services.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Web Development</a>
+          </li>
+          <li><a href="services.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">App Development</a>
+          </li>
+          <li><a href="services.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">ICT Consultancy</a>
+          </li>
+          <li><a href="services.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Product Design</a>
+          </li>
+          <li><a href="services.html"
+              class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Business Centre</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Info -->
+      <div class="footer-col space-y-4">
+        <h3 class="font-michroma text-lg text-brand-yellow border-b border-brand-accent/30 pb-2 inline-block">Contact
+        </h3>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i>
+            <p class="text-gray-400 text-sm">Morrebs Hub, Suite 38, Glory Plaza, Zaramaganda - Rayfield Road, Jos,
+              Nigeria</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-phone text-brand-accent"></i>
+            <p class="text-gray-400 text-sm hover:text-white transition-colors"><a
+                href="tel:07062400994">07062400994</a>, <a href="tel:09160537060">09160537060</a></p>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-envelope text-brand-accent"></i>
+            <p class="text-gray-400 text-sm hover:text-white transition-colors"><a
+                href="mailto:hello@morrebs.org">hello@morrebs.org</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-white/10 pt-8 text-center text-gray-500 text-xs">
+      <p>Copyright © 2025 Morrebs ICT Solutions Limited. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="morrebs.js"></script>
+</body>
+
+</html>

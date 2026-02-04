@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academy | Morrebs ICT</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-KNuXxB+YkMPT2YQgMJ+Z9Zc3yi5FlS7G8h3k4xU96kz8W5PqHXH9M3UZiXfA7xeoWz4RNUC3KxWvWQXk7Xr3VQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="morrebs.css" />
+  <link rel="stylesheet" href="schoool.css" />
+</head>
+
+<body>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="navbar" class="site-header">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/morrebs-logo-1.webp" alt="Morrebs Logo" />
+        <span>Morrebs ICT</span>
+      </div>
+
+      <nav class="primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="academy.html" class="active">School of ICT</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- HAMBURGER BUTTON -->
+      <button id="menuToggle" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="academy.html" class="active">School of ICT</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="ict-hero">
+    <div class="ict-hero-content">
+      <h1>Empowering Innovators Through Technology</h1>
+      <p>
+        From No-Code to Full Stack Learn, Build, and Grow at the School of
+        ICT. Unlock your potential with hands on courses, mentors, and
+        community support.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="#courses">Explore Courses</a>
+        <a href="contact.html">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SCHOOL SECTION ===== -->
+  <section class="about-school reveal" id="about-school">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About the School of ICT</h2>
+        <p>
+          The <strong>School of ICT</strong> is a hub for digital
+          transformation designed to bridge the gap between ideas and
+          innovation. From no code builders to advanced programmers, our goal is to empower students with hands on
+          skills and real world
+          experience.
+        </p>
+        <p>
+          Our ecosystem combines expert mentorship, cutting-edge resources,
+          and global exposure preparing learners to thrive in a tech driven
+          future.
+        </p>
+        <a href="#courses" class="btn-learn">Discover Our Courses</a>
+      </div>
+      <div class="about-image">
+        <img src="images/school-about.JPG" alt="ICT Classroom" />
+      </div>
+    </div>
+  </section>
+
+  <section id="school-no-code" class="school-section">
+    <h2 class="section-title">School of No Code</h2>
+    <div class="course-grid">
+      <!-- Card 1 -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Microsoft-Logo.webp" alt="Webflow Design" loading="lazy" />
+          <h3>Microsoft Office Suites</h3>
+          <p class="price">₦70,000</p>
+          <p class="duration">5 weeks</p>
+          <button class="toggle-info">
+            <i class="fa-solid fa-angle-down">Curriculum</i>
+          </button>
+        </div>
+        <div class="course-back">
+          <h3>Microsoft Office Suites</h3>
+          <p class="summary">
+            The Microsoft Office is the collective name for Microsoft’s set of
+            home and business productivity software for common productivity
+            tasks, including a word processing program, a spreadsheet tool,
+            presentation software, etc.
+          </p>
+          <ul class="curriculum">
+            <li>Introduction to Computer</li>
+            <li>Digital Literacy I,II & III</li>
+            <li>Microsoft Word & Excel</li>
+            <li>Microsoft PowerPoint</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Repeat for 7 more cards -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Graphics-Design.webp" alt="Graphics Design" loading="lazy" />
+          <h3>Graphics Design</h3>
+          <p class="price">₦70,000</p>
+          <p class="duration">2 Months</p>
+          <button class="toggle-info">
+            <i class="fa-solid fa-angle-down">Curriculum</i>
+          </button>
+        </div>
+        <div class="course-back">
+          <h3>Design like a pro</h3>
+          <p class="summary">
+            The course focused on taking ideas and inspiration and
+            transforming them into usable designs that make a big impression.
+            The art of visual communication is essential, especially for
+            brands looking to connect with their target audience, and graphic
+            design is the perfect solution.
+          </p>
+          <ul class="curriculum">
+            <li>Elements & Principles of Design</li>
+            <li>Introduction to CorelDraw</li>
+            <li>CorelDraw Workspace</li>
+            <li>Adobe Photoshop Environment</li>
+            <li>Photo Manipulation and Retouching</li>
+            <li>Scaling and Screwing</li>
+            <li>Working with Layers & Text</li>
+            <li>Image optimization and Colour management</li>
+            <li>Photoshop Filters</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Blogging.webp" alt="Blogging & Content Development" loading="lazy" />
+          <h3>Blogging, Content Creation & Marketing</h3>
+          <p class="price">₦150,000</p>
+          <p class="duration">3 Months</p>
+          <button class="toggle-info">
+            <i class="fa-solid fa-angle-down">Curriculum</i>
+          </button>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Vlogging, Blogging and Content Development is not just for business but for personal growth and a
+            contribution to the community in your own unique form a lot of individuals have benefitted personally,
+            professionally, and financially from blogging.
+          </p>
+          <ul class="curriculum">
+            <li>Understanding “Blog” and “Blogging”</li>
+            <li>Why People Blog</li>
+            <li>Choosing a Perfect Niche</li>
+            <li>What People Want from Blogs</li>
+            <li>Setting up a Self Hosted Blog</li>
+            <li>Setting up Hosting Plan and Domain</li>
+            <li>Understanding the Choicest CMS; WordPress</li>
+            <li>Familiarizing with WordPress Tabs</li>
+            <li>Understanding Themes and Plugins</li>
+            <li>Writing and Creating Great Blog Content</li>
+            <li>Blog Content Development Tools</li>
+            <li>Understanding how to Create Great SEO Blogposts</li>
+            <li>Best Blogging Practices</li>
+            <li>Ways of Promoting your Blog</li>
+            <li>Establishing your Blog on the Social Media</li>
+            <li>Monetising Your Blog</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Data-Analysis.webp" alt="AI Tools Masterclass" loading="lazy" />
+          <h3>Data Analysis</h3>
+          <p class="price">₦150,000</p>
+          <p class="duration">6 Weeks</p>
+          <button class="toggle-info">
+            <i class="fa-solid fa-angle-down">Curriculum</i>
+          </button>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Embark on a comprehensive journey to acquire the essential skills and in depth knowledge required for
+            mastering the art of inspecting, cleaning, transforming, and modelling data for insightful analysis and
+            decision-making Using Excel and Power BI.
+          </p>
+          <ul class="curriculum">
+            <li>Introduction to Data Analysis</li>
+            <li>Data Exploration and Preprocessing</li>
+            <li>Data cleaning and preprocessing methods</li>
+            <li>Statistical Foundations</li>
+            <li>Data Visualization</li>
+            <li>Descriptive Analytics</li>
+            <li>Inferential Analytics</li>
+            <li>Big Data Analytics</li>
+            <li>Time Series Analysis</li>
+            <li>Ethical Considerations in Data Analysis</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/UIUX.webp" alt="UI/UX" loading="lazy" />
+          <h3>UI/UX Design</h3>
+          <p class="price">₦90,000</p>
+          <p class="duration">3 Months</p>
+          <button class="toggle-info">
+            <i class="fa-solid fa-angle-down">Curriculum</i>
+          </button>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Embark on a comprehensive and in depth learning journey with our specialized course that delves into the
+            intricate realms of graphics, User Interface (UI) and User Experience (UX) design. Join us on this enriching
+            educational journey.
+          </p>
+          <ul class="curriculum">
+            <li>Figma interface & tools</li>
+            <li>Wireframing & prototyping</li>
+            <li>Design systems</li>
+            <li>User testing</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Video-Editing.webp" alt="Video Editing" loading="lazy" />
+          <h3>Video Editing</h3>
+          <p class="price">₦150,000</p>
+          <p class="duration">2 Months</p>
+          <button class="toggle-info">
+            <i class="fa-solid fa-angle-down">Curriculum</i>
+          </button>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Master video editing with our course. Learn industry-standard techniques to craft compelling visual stories.
+            Perfect for beginners and enthusiasts, this hands on experience will elevate your editing skills and unleash
+            your creativity.
+          </p>
+          <ul class="curriculum">
+            <li>Introduction to video editing</li>
+            <li>Setting up your editing workspace</li>
+            <li>Fundamental of Editing software</li>
+            <li>Importing and management of media</li>
+            <li>Basic editing techniques</li>
+            <li>Advanced editing techniques</li>
+            <li>Sound design and audio enhancement</li>
+            <li>Final project: real-world video editing assignment</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/wordpress-development.webp" alt="Freelance Tools" loading="lazy" />
+          <h3>WordPress Development</h3>
+          <p class="price">₦150,000</p>
+          <p class="duration">3 Months</p>
+          <button class="toggle-info">
+            <i class="fa-solid fa-angle-down">Curriculum</i>
+          </button>
+        </div>
+
+        <div class="course-back">
+          <p class="summary">
+            The course focused on taking ideas and inspiration and transforming them into usable designs that make a big
+            impression. The art of visual communication is essential, especially for brands looking to connect with
+            their target audience, and graphic design is the perfect solution.
+          </p>
+          <ul class="curriculum">
+            <li>Introduction to WordPress</li>
+            <li>Setting Up a WordPress Site</li>
+            <li>E-commerce with WordPress</li>
+            <li>Responsive Design and Mobile Optimization</li>
+            <li>Security Best Practices</li>
+            <li>WordPress Maintenance and Troubleshooting</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/virtual assistance.jpg" alt="Virtual Assistance" loading="lazy" />
+          <h3>Virtual Assistance</h3>
+          <p class="price">₦120,000</p>
+          <p class="duration">2 Months</p>
+          <button class="toggle-info">
+            <i class="fa-solid fa-angle-down">Curriculum</i>
+          </button>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Learn the skills to become a successful Virtual Assistant.
+          </p>
+          <ul class="curriculum">
+            <li>Administrative Tasks</li>
+            <li>Communication Tools</li>
+            <li>Project Management</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="school-section coding-section">
+    <h2 class="section-title">School of Coding</h2>
+
+    <div class="course-grid">
+      <!-- Card 1 -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Frontend.webp" alt="HTML & CSS" loading="lazy" />
+          <h3>Web Design (Frontend)</h3>
+          <p class="price">₦150,000</p>
+          <p class="duration">3 Months</p>
+          <div class="toggle-info"> <i class="fa-solid fa-angle-down">Curriculum</i></div>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Learn to build visually appealing and responsive websites using
+            HTML and CSS fundamentals.
+          </p>
+          <ul>
+            <li>HTML5 structure & semantics</li>
+            <li>CSS3 styling & layouts</li>
+            <li>Responsive design</li>
+            <li>Project: Portfolio site</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/back end.jpg" alt="JS & React JS" loading="lazy" />
+          <h3>Web Design (Backend)</h3>
+          <p class="price">₦120,000</p>
+          <p class="duration">3 Months</p>
+          <div class="toggle-info"> <i class="fa-solid fa-angle-down">Curriculum</i></div>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Learn to build visually appealing and responsive websites using
+            HTML and CSS fundamentals.
+          </p>
+          <ul>
+            <li>HTML5 structure & semantics</li>
+            <li>CSS3 styling & layouts</li>
+            <li>Responsive design</li>
+            <li>Project: Portfolio site</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Full-Stack-Developer.webp" alt="Python" loading="lazy" />
+          <h3>Software Development (Full-Stack)</h3>
+          <p class="price">₦250,000</p>
+          <p class="duration">6 Months</p>
+          <div class="toggle-info"> <i class="fa-solid fa-angle-down">Curriculum</i></div>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Delve into the intricacies of both backend and frontend frameworks, gaining a holistic understanding of the
+            development process. By enrolling now, you’re poised to evolve into a versatile tech expert capable of
+            seamlessly crafting client and server software, equipping yourself for the ever evolving landscape of
+            technology.
+          </p>
+          <ul>
+            <li>All Listed Courses on Front End</li>
+            <li>All Listed Courses on Back End</li>
+            <li>Dependent Project</li>
+            <li>Independent Project</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Programme-in-python-language.webp" alt="Python" loading="lazy" />
+          <h3>Python Programming</h3>
+          <p class="price">₦100,000</p>
+          <p class="duration">3 Months</p>
+          <div class="toggle-info"> <i class="fa-solid fa-angle-down">Curriculum</i></div>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Learn Python programming from scratch and explore its use in web
+            and data applications.
+          </p>
+          <ul>
+            <li>Syntax & logic</li>
+            <li>Data types & loops</li>
+            <li>File handling</li>
+            <li>Final project</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+
+
+
+      <!-- Card 6 -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Mobile-App-Development.webp" alt="Python" loading="lazy" />
+          <h3>Mobile App Development</h3>
+          <p class="price">₦150,000</p>
+          <p class="duration">3 Months</p>
+          <div class="toggle-info"> <i class="fa-solid fa-angle-down">Curriculum</i></div>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Learning mobile app development is essential in today’s digital era. With the widespread use of smartphones
+            and tablets, the need for mobile apps continues to rise. This course will equip you with expert level
+            proficiency in utilizing Flutter to develop mobile applications for both Android and iOS platforms.
+          </p>
+          <ul>
+            <li>The Fundamentals</li>
+            <li>Dart Programming</li>
+            <li>Building User Interfaces</li>
+            <li>Navigation</li>
+            <li>Projects</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/iot-and-ai.webp" alt="Python" loading="lazy" />
+          <h3>IoT and Robotics</h3>
+          <p class="price">₦150,000</p>
+          <p class="duration">3 Months</p>
+          <div class="toggle-info"> <i class="fa-solid fa-angle-down">Curriculum</i></div>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Our Internet of Things (IoT) course at Morrebs School of ICT equips you with the fundamentals of IoT
+            starting with Arduino, from sensor networks to real-world applications. Through hands on projects and
+            expert-led sessions, you’ll learn to build and deploy IoT solutions for various industries.
+          </p>
+          <ul>
+            <li>Introduction to Arduino</li>
+            <li>Basic Electronics and Components</li>
+            <li>Programming Fundamentals</li>
+            <li>Working with Digital Inputs and Outputs</li>
+            <li>Analog Inputs and Outputs</li>
+            <li>Serial Communication</li>
+            <li>Interfacing Sensors and Actuators</li>
+            <li>Advanced Programming Concepts</li>
+            <li>Integrating Displays</li>
+            <li>Final project</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Cybersecurity.webp" alt="Python" loading="lazy" />
+          <h3>Basic Cybersecurity</h3>
+          <p class="price">₦150,000</p>
+          <p class="duration">3 Months</p>
+          <div class="toggle-info"> <i class="fa-solid fa-angle-down">Curriculum</i></div>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Learn the fundamentals of online security in our Cybersecurity Basics course at Morrebs School of ICT. Gain
+            practical skills to protect systems, data, and personal information from cyber threats through expert led
+            sessions and hands-on exercises.
+          </p>
+          <ul>
+            <li>Introduction to Cybersecurity</li>
+            <li>Networking Fundamentals</li>
+            <li>Introduction to Operating Systems</li>
+            <li>Introduction to Cyber Attacks</li>
+            <li>Fundamentals of Cryptography</li>
+            <li>Web Application Security Basics</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+
+      <div class="course-card">
+        <div class="course-front">
+          <img src="images/Cybersecurity (1).webp" alt="Python" loading="lazy" />
+          <h3>Advanced Cybersecurity</h3>
+          <p class="price">₦250,000</p>
+          <p class="duration">3 Months</p>
+          <div class="toggle-info"> <i class="fa-solid fa-angle-down">Curriculum</i></div>
+        </div>
+        <div class="course-back">
+          <p class="summary">
+            Take your cybersecurity skills to the next level with our Advanced Cybersecurity course at Morrebs School of
+            ICT. Dive deep into threat analysis, ethical hacking, network security, and advanced defense strategies
+            through hands on training and expert guidance.
+          </p>
+          <ul>
+            <li>Advanced Networking and System Security</li>
+            <li>Penetration Testing</li>
+            <li>Incident Response and Digital Forensics</li>
+            <li>Advanced Cryptography</li>
+            <li>Threat Intelligence and Malware Analysis</li>
+            <li>Specialized Security Topics</li>
+          </ul>
+          <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="school-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Morrebs ICT</h2>
+        <p>Empowering Innovators Through Technology</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fa-solid fa-phone"></i> +234 907 8111 978</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@morrebs.org</p>
+        <p><i class="fa-solid fa-globe"></i> www.morrebs.org</p>
+        <p><i class="fa-solid fa-location-dot"></i> Suite 38, Glory Plaza, Zaramaganda Rayfield Road, Jos.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Morrebs ICT. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="school.js"></script>
+</body>
+
+</html>

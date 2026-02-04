@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Morrebs ICT</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="morrebs.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="navbar" class="site-header">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/morrebs-logo-1.webp" alt="Morrebs Logo" />
+        <span>Morrebs ICT</span>
+      </div>
+
+      <nav class="primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="academy.html">School of ICT</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- HAMBURGER BUTTON -->
+      <button id="menuToggle" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="academy.html">School of ICT</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Contact Morrebs ICT</h1>
+      <p>Professional ICT solutions start with a conversation</p>
+    </div>
+  </section>
+
+  <section class="contact-section container fade-in">
+
+    <!-- Info Side -->
+    <div class="contact-info slide-left">
+      <h2>Get in Touch</h2>
+      <p>
+        Reach out to Morrebs ICT for consultations, partnerships, or technical support.
+        Our team is available during business hours to respond promptly.
+      </p>
+
+      <div class="info-box">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <p>hello@morrebs.org</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h4>Phone</h4>
+          <p>+234 907 8111 978</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-clock"></i>
+        <div>
+          <h4>Office Hours</h4>
+          <p>Mon – Fri<br>8:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map">
+        <iframe id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    <!-- Form Side -->
+    <div class="contact-form slide-right">
+      <h2>Send Us a Message</h2>
+
+      <form>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="Your email address" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="Your phone number">
+        </div>
+
+        <div class="form-group">
+          <label>Course of Interest</label>
+          <select required>
+            <option value="" disabled selected>Select an option</option>
+            <option>Front-End web development</option>
+            <option>Microsoft Office Suites</option>
+            <option>Graphics-Design</option>
+            <option>Career Design(Digital Marketing)</option>
+            <option>Blogging, Content Creation & Marketing</option>
+            <option>UI/UX Design</option>
+            <option>Data Analysis </option>
+            <option>Video Editing</option>
+            <option>Wordpress Development</option>
+            <option>Virtual Assistance</option>
+            <option>Web development(Front-End)</option>
+            <option>Web development(Back-End)</option>
+            <option>Web development(Full-Stack)</option>
+            <option> JavaScript Essentials</option>
+            <option> React JS Development</option>
+            <option>Python Programming</option>
+            <option>Mobile App Development</option>
+            <option>IoT and Robotics</option>
+            <option>Advanced Cyber Security</option>
+            <option>Basic Cyber Security</option>
+            <option>Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <button type="submit">
+          <i href="hello@morrebs.org" class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Morrebs ICT. All Rights Reserved.</p>
+  </footer>
+
+  <script src="morrebs.js"></script>
+  <script>
+    const mapFrame = document.getElementById("mapFrame");
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+
+          mapFrame.src = `https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
+        },
+        () => {
+          // Fallback if user denies location
+          mapFrame.src = "https://maps.google.com/maps?q=Nigeria&z=5&output=embed";
+        }
+      );
+    } else {
+      mapFrame.src = "https://maps.google.com/maps?q=Nigeria&z=5&output=embed";
+    }
+  </script>
+
+</body>
+
+</html>

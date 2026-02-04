@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Morrebs ICT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://www.elegantthemes.com/fonts/ETmodules/ETmodules.css">
+    <!-- <link rel="stylesheet" href="morrebs.css" /> -->
+    <link rel="stylesheet" href="services.css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#800000',
+                        'brand-purple': '#4E0070',
+                        'brand-yellow': '#ffcf56',
+                        'brand-accent': '#cf5c36',
+                        'brand-dark': '#050517',
+                    },
+                    fontFamily: {
+                        michroma: ['Michroma', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Michroma and Poppins Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header id="navbar"
+        class="fixed top-0 left-0 w-full z-[1000] bg-gradient-to-br from-brand-red to-brand-purple text-white shadow-lg transition-all duration-400 ease-in-out">
+        <div class="nav-inner max-w-[1200px] mx-auto px-[4%] h-[70px] flex items-center justify-between">
+            <div class="logo flex items-center gap-2.5 font-michroma text-[1.4rem] tracking-widest mr-auto">
+                <img src="images/morrebs-logo-1.webp" alt="Morrebs Logo" class="h-auto w-16 object-cover" />
+                <span>Morrebs ICT</span>
+            </div>
+
+            <nav class="primary hidden md:block">
+                <ul class="flex gap-10 m-0 p-0 list-none">
+                    <li><a href="index.html"
+                            class="text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">Home</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">About</a>
+                    </li>
+                    <li><a href="services.html"
+                            class="text-brand-yellow text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">Services</a>
+                    </li>
+                    <li><a href="academy.html"
+                            class="text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">School
+                            of ICT</a></li>
+                    <li><a href="contact.html"
+                            class="text-white text-base font-medium font-poppins tracking-wide transition-all duration-300 hover:text-brand-yellow hover:scale-105">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- HAMBURGER BUTTON -->
+            <button id="menuToggle"
+                class="hamburger md:hidden group flex flex-col justify-center w-7 h-6 bg-transparent border-none cursor-pointer gap-[5px] transition-transform duration-300 ease-out"
+                aria-label="Toggle menu" aria-expanded="false">
+                <span
+                    class="bar h-[3px] w-full bg-white rounded-[2px] transition-all duration-400 ease-in-out group-[.active]:translate-y-[8px] group-[.active]:rotate-45"></span>
+                <span
+                    class="bar h-[3px] w-full bg-white rounded-[2px] transition-all duration-400 ease-in-out group-[.active]:opacity-0"></span>
+                <span
+                    class="bar h-[3px] w-full bg-white rounded-[2px] transition-all duration-400 ease-in-out group-[.active]:-translate-y-[8px] group-[.active]:-rotate-45"></span>
+            </button>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu"
+            class="mobile-menu hidden [&.open]:flex flex-col bg-black/90 absolute top-[70px] left-0 w-full py-5 text-center backdrop-blur-md"
+            aria-hidden="true">
+            <a href="index.html"
+                class="py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">Home</a>
+            <a href="about.html"
+                class="py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">About</a>
+            <a href="services.html"
+                class="text-brand-yellow py-4 text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">Services</a>
+            <a href="academy.html"
+                class="py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">School
+                of ICT</a>
+            <a href="contact.html"
+                class="py-4 text-white text-lg font-poppins no-underline transition-all duration-300 hover:bg-white/10 hover:text-brand-yellow">Contact</a>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="services-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Our Services</h1>
+            <p>Innovative Solutions for a Digital World. From education to enterprise, we power your growth.</p>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES GRID ===== -->
+    <section class="services-main container">
+        <div class="section-header">
+            <h2>What We Do</h2>
+            <p>Comprehensive ICT solutions tailored to your needs.</p>
+        </div>
+
+        <div class="services-grid-layout">
+            <!-- 1. Web Development -->
+            <div class="service-tech-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>
+                    Custom websites that drive growth. We build responsive, SEO-optimized, and visually stunning
+                    websites
+                    tailored to your brand identity.
+                </p>
+                <ul>
+                    <li>Corporate Websites</li>
+                    <li>E-commerce Platforms</li>
+                    <li>Web Portals</li>
+                </ul>
+            </div>
+
+            <!-- 2. School of ICT -->
+            <div class="service-tech-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>School of ICT</h3>
+                <p>
+                    Empowering the next generation of tech leaders. Hands-on training in coding, design, and digital
+                    literacy.
+                </p>
+                <ul>
+                    <li>Coding Bootcamps</li>
+                    <li>Digital Marketing</li>
+                    <li>Data Analysis</li>
+                </ul>
+                <a href="academy.html" class="card-link">Explore Academy &rarr;</a>
+            </div>
+
+            <!-- 3. Mobile App Development -->
+            <div class="service-tech-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile App Dev</h3>
+                <p>
+                    Native and cross-platform mobile applications that provide seamless user experiences on iOS and
+                    Android.
+                </p>
+                <ul>
+                    <li>Flutter Development</li>
+                    <li>iOS & Android</li>
+                    <li>App Maintenance</li>
+                </ul>
+            </div>
+
+            <!-- 4. Product Design -->
+            <div class="service-tech-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+                <h3>Product Design</h3>
+                <p>
+                    User-centric UI/UX design that solves problems. We craft intuitive interfaces and engaging
+                    experiences.
+                </p>
+                <ul>
+                    <li>UI/UX Design</li>
+                    <li>Prototyping</li>
+                    <li>Brand Identity</li>
+                </ul>
+            </div>
+
+            <!-- 5. ICT Consultancy -->
+            <div class="service-tech-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>ICT Consultancy</h3>
+                <p>
+                    Strategic technology advice to optimize your business operations and drive digital transformation.
+                </p>
+                <ul>
+                    <li>IT Strategy</li>
+                    <li>System Analysis</li>
+                    <li>Digital Transformation</li>
+                </ul>
+            </div>
+
+            <!-- 6. Cybersecurity -->
+            <div class="service-tech-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Cybersecurity</h3>
+                <p>
+                    Protect your digital assets with our robust security solutions. We help you stay ahead of threats.
+                </p>
+                <ul>
+                    <li>Security Audits</li>
+                    <li>Threat Analysis</li>
+                    <li>Secure Architecture</li>
+                </ul>
+            </div>
+
+            <!-- 7. Business Centre -->
+            <div class="service-tech-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-print"></i>
+                </div>
+                <h3>Business Centre</h3>
+                <p>
+                    Your one-stop hub for office and business needs. High-quality printing, scanning, and documentation
+                    services.
+                </p>
+                <ul>
+                    <li>Typsetting & Printing</li>
+                    <li>Lamination & Binding</li>
+                    <li>Digital Passport</li>
+                </ul>
+            </div>
+
+            <!-- 8. Innovation Hub -->
+            <div class="service-tech-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Innovation Hub</h3>
+                <p>
+                    A co-working space and incubator for startups. We nurture ideas into thriving businesses.
+                </p>
+                <ul>
+                    <li>Co-working Space</li>
+                    <li>Incubation Program</li>
+                    <li>Mentorship</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROCESS SECTION ===== -->
+    <section class="process-section">
+        <div class="container">
+            <h2>Our Workflow</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Consult</h3>
+                    <p>We analyze your needs and goals to craft a tailored strategy.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Innovate</h3>
+                    <p>Our team designs and builds cutting-edge solutions for you.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Deploy</h3>
+                    <p>We launch your solution and provide ongoing support for growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section
+        class="cta-section bg-gradient-to-r from-brand-red to-brand-purple text-white py-16 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="relative z-10 max-w-[800px] mx-auto">
+            <h2 class="font-michroma text-2xl md:text-3xl mb-6">Transform your Life With a Career in Tech Today</h2>
+            <p class="font-poppins text-gray-100 mb-8 max-w-[600px] mx-auto">
+                Join our academy and gain the skills needed to thrive in the digital age.
+            </p>
+            <a href="academy.html"
+                class="inline-block py-3 px-8 bg-brand-yellow text-brand-dark font-semibold rounded-[30px] transition-transform duration-300 hover:scale-105 hover:shadow-lg">Get
+                Started <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 font-poppins text-sm">
+        <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Col 1: Logo & About -->
+            <div class="footer-col space-y-4">
+                <div class="flex items-center gap-3 font-michroma text-xl tracking-wide">
+                    <img src="images/morrebs-logo-1.webp" alt="Morrebs Logo" class="w-12 h-auto" />
+                    <span>Morrebs ICT</span>
+                </div>
+                <p class="text-gray-400 leading-relaxed">
+                    Empowering the future through technology, innovation, and education. Join us on our journey to
+                    digital excellence.
+                </p>
+                <div class="social-links flex gap-3 mt-4">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"
+                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"
+                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+                            class="fab fa-x-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"
+                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"
+                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all duration-300"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col space-y-4">
+                <h3 class="font-michroma text-lg text-brand-yellow border-b border-brand-accent/30 pb-2 inline-block">
+                    Quick Links</h3>
+                <ul class="space-y-2.5">
+                    <li><a href="about.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">About
+                            Us</a></li>
+                    <li><a href="services.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Services</a>
+                    </li>
+                    <li><a href="academy.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">School
+                            of ICT</a></li>
+                    <li><a href="https://morrebs.org/careers/"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Careers</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Services -->
+            <div class="footer-col space-y-4">
+                <h3 class="font-michroma text-lg text-brand-yellow border-b border-brand-accent/30 pb-2 inline-block">
+                    Services</h3>
+                <ul class="space-y-2.5">
+                    <li><a href="contact.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Web
+                            Development</a></li>
+                    <li><a href="contact.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">App
+                            Development</a></li>
+                    <li><a href="contact.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">ICT
+                            Consultancy</a></li>
+                    <li><a href="contact.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Product
+                            Design</a></li>
+                    <li><a href="contact.html"
+                            class="text-gray-400 hover:text-white hover:pl-2 transition-all duration-300 block">Business
+                            Centre</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact Info -->
+            <div class="footer-col space-y-4">
+                <h3 class="font-michroma text-lg text-brand-yellow border-b border-brand-accent/30 pb-2 inline-block">
+                    Contact</h3>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i>
+                        <p class="text-gray-400 text-sm">Morrebs Hub, Suite 38, Glory Plaza, Zaramaganda - Rayfield
+                            Road, Jos, Nigeria</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-phone text-brand-accent"></i>
+                        <p class="text-gray-400 text-sm hover:text-white transition-colors"><a
+                                href="tel:07062400994">07062400994</a>, <a href="tel:09160537060">09160537060</a></p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-brand-accent"></i>
+                        <p class="text-gray-400 text-sm hover:text-white transition-colors"><a
+                                href="mailto:hello@morrebs.org">hello@morrebs.org</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 border-t border-white/10 pt-8 text-center text-gray-500 text-xs">
+            <p>Copyright © 2025 Morrebs ICT Solutions Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="morrebs.js"></script>
+</body>
+
+</html>
